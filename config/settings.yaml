@@ -1,0 +1,26 @@
+assistant:
+  name: JARVIS
+  hotkey: ctrl+alt+j
+  speak_replies: true
+  confirm_destructive_actions: true
+
+ai:
+  base_url: http://127.0.0.1:11434
+  model: llama3.2:3b
+  # Must be a vision-capable model installed locally; blank disables image analysis.
+  vision_model: ""
+  request_timeout_seconds: 120
+  temperature: 0.4
+
+voice:
+  sample_rate: 16000
+  max_record_seconds: 12
+  silence_seconds: 1.2
+  energy_threshold: 0.012
+  whisper_model: tiny
+  whisper_device: cpu
+
+privacy:
+  capture_screenshots_only_on_request: true
+  allow_cloud_fallback: false
+  allow_arbitrary_shell_commands: false
